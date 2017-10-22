@@ -1,0 +1,6 @@
+framework module Pods_cabBudget {
+  umbrella header "Pods-cabBudget-umbrella.h"
+
+  export *
+  module * { export * }
+}
