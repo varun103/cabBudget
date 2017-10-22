@@ -5,9 +5,7 @@
 //  Created by Varun Ajmera on 10/17/17.
 //  Copyright © 2017 Varun Ajmera. All rights reserved.
 //
-
 import Foundation
-
 
 /// Oauth token for an app 
 protocol OAuthToken {
@@ -32,8 +30,13 @@ protocol OAuthToken {
 }
 
 protocol UserAuthInfo: OAuthToken {
-    
     /// UserId
-    var user : String? { get }
+    var userId : String? { get }
+    
+    ///firstName
+    var userFirstName: String? {get}
+    
+    ///lastName
+    var userLastName: String? {get}
     
 }

@@ -11,3 +11,7 @@ import Foundation
 enum TimeZoneError: Error {
     case notFound 
 }
+
+enum DBError: Error {
+    case couldNotSave
+}

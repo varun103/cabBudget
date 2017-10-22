@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		292F718D78CB72AB96CB5A13 /* Pods_cabBudget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8D55F797F8B3A6293E87A7 /* Pods_cabBudget.framework */; };
+		551C482C1F9C65B000722465 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C482B1F9C65B000722465 /* Ride.swift */; };
+		551C482D1F9C70BD00722465 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 554C7C8B1F691434001D4BE1 /* Model.xcdatamodeld */; };
+		551C482F1F9C788300722465 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C482E1F9C788300722465 /* UserProfile.swift */; };
+		551C48311F9CA4F300722465 /* SaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C48301F9CA4F300722465 /* SaveViewController.swift */; };
 		5568A3AC1F7F2A6E00D8BC94 /* LyftAuthenticationServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5568A3AB1F7F2A6E00D8BC94 /* LyftAuthenticationServiceImpl.swift */; };
 		5583FE0D1F8972790083E409 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5583FE0C1F8972790083E409 /* Location.swift */; };
 		5586638C1F6F518E00D36D82 /* HttpUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5586638B1F6F518E00D36D82 /* HttpUtil.swift */; };
@@ -53,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		551C482B1F9C65B000722465 /* Ride.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
+		551C482E1F9C788300722465 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		551C48301F9CA4F300722465 /* SaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewController.swift; sourceTree = "<group>"; };
 		554C7C8C1F691434001D4BE1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		5568A3AB1F7F2A6E00D8BC94 /* LyftAuthenticationServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyftAuthenticationServiceImpl.swift; sourceTree = "<group>"; };
 		5583FE0C1F8972790083E409 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -147,6 +154,8 @@
 				55F0A3101F8038F5009F6ACF /* Util.swift */,
 				5583FE0C1F8972790083E409 /* Location.swift */,
 				55E216A71F95F33700DB0B14 /* OauthToken.swift */,
+				551C482B1F9C65B000722465 /* Ride.swift */,
+				551C482E1F9C788300722465 /* UserProfile.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -154,7 +163,6 @@
 		55A8EAD11F67C1890036B87F = {
 			isa = PBXGroup;
 			children = (
-				554C7C8B1F691434001D4BE1 /* Model.xcdatamodeld */,
 				55A8EADC1F67C1890036B87F /* cabBudget */,
 				55A8EAF11F67C1890036B87F /* cabBudgetTests */,
 				55A8EAFC1F67C1890036B87F /* cabBudgetUITests */,
@@ -177,6 +185,7 @@
 		55A8EADC1F67C1890036B87F /* cabBudget */ = {
 			isa = PBXGroup;
 			children = (
+				554C7C8B1F691434001D4BE1 /* Model.xcdatamodeld */,
 				55F0A3141F806163009F6ACF /* cabBudget.entitlements */,
 				556AE97A1F906F3700BA02C9 /* lyftApi */,
 				556AE97B1F906F8000BA02C9 /* common */,
@@ -187,6 +196,7 @@
 				55A8EAE61F67C1890036B87F /* LaunchScreen.storyboard */,
 				55A8EAE91F67C1890036B87F /* Info.plist */,
 				55E18E3D1F897AA400D84946 /* AppErrors.swift */,
+				551C48301F9CA4F300722465 /* SaveViewController.swift */,
 			);
 			path = cabBudget;
 			sourceTree = "<group>";
@@ -426,17 +436,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				5568A3AC1F7F2A6E00D8BC94 /* LyftAuthenticationServiceImpl.swift in Sources */,
+				551C48311F9CA4F300722465 /* SaveViewController.swift in Sources */,
 				55A8EAE01F67C1890036B87F /* ViewController.swift in Sources */,
+				551C482C1F9C65B000722465 /* Ride.swift in Sources */,
 				55AFB6E71F909586008A1BD4 /* UserAuthContext.swift in Sources */,
 				55E3DF7F1F7384BE00AFDF14 /* LyftApi.swift in Sources */,
 				55A8EADE1F67C1890036B87F /* AppDelegate.swift in Sources */,
 				55E216A81F95F33700DB0B14 /* OauthToken.swift in Sources */,
 				5586638C1F6F518E00D36D82 /* HttpUtil.swift in Sources */,
+				551C482D1F9C70BD00722465 /* Model.xcdatamodeld in Sources */,
 				55E3DF851F7CDD9A00AFDF14 /* Keychain.swift in Sources */,
 				55F0A3111F8038F5009F6ACF /* Util.swift in Sources */,
 				55E3DF891F7CF24200AFDF14 /* LyftKeychainKey.swift in Sources */,
 				55E3DF7D1F722EC200AFDF14 /* HttpClientImpl.swift in Sources */,
 				5583FE0D1F8972790083E409 /* Location.swift in Sources */,
+				551C482F1F9C788300722465 /* UserProfile.swift in Sources */,
 				55E3DF811F7B55DD00AFDF14 /* LyftModels.swift in Sources */,
 				55E18E3E1F897AA400D84946 /* AppErrors.swift in Sources */,
 				55E3AFAB1F71268F00CC44BB /* LyftOAuthConfig.swift in Sources */,

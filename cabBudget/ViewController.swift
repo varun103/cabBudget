@@ -31,11 +31,11 @@ class ViewController: UIViewController {
         let lyftApi = LyftAPIImpl()
         
         lyftAuth.fetchAccessToken { accessToken in
-            lyftApi.rideHistory(accessToken: accessToken) { rides, error in
+            lyftApi.rideHistory(accessToken: accessToken) {[weak self] rides, error in
                 
                 if let _rides = rides {
                     for ride in _rides {
-                        print(ride.price)
+                        self?.insert(ride)
                     }
                 }
             }
@@ -56,11 +56,15 @@ class ViewController: UIViewController {
                 lyftApi.userProfile(accessToken: _a.accessToken!) { profile, error in
                     if (error != nil) {}
                     else {
-                        UserAuthContextImp.get().saveUserAuthToken(userId: profile?.id ?? "", oauthToken: _a )
+                        UserAuthContextImp.get().saveUserAuthToken(user: profile!, oauthToken: _a )
                     }
                 }
             }
         }
+    }
+    
+    func insert(_ ride:Rides) {
+        
     }
     
     func test(){

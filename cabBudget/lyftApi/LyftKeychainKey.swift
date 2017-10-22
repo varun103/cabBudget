@@ -13,7 +13,9 @@ struct LyftKeychainKey: KeychainGenericPasswordType, UserAuthInfo {
     
     let accountName: String
     let token: OAuthToken
-    let userId: String
+    let _userId: String
+    let _userFirstName: String
+    let _userLastName: String
     
     var data = [String: Any]()
     
@@ -25,7 +27,9 @@ struct LyftKeychainKey: KeychainGenericPasswordType, UserAuthInfo {
         _data["expirationTime"] = String(token.expirationTime!)
         _data["scope"] = token.scope
         _data["tokenType"] = token.tokenType
-        _data["userId"] = self.userId
+        _data["userId"] = self._userId
+        _data["userFirstName"] = self._userFirstName
+        _data["userLastName"] = self._userLastName
         return _data
     }
     
@@ -44,7 +48,7 @@ struct LyftKeychainKey: KeychainGenericPasswordType, UserAuthInfo {
         return data["accessToken"] as? String
     }
     
-    var user: String? {
+    var userId: String? {
         return data["userId"] as? String
     }
     
@@ -63,13 +67,29 @@ struct LyftKeychainKey: KeychainGenericPasswordType, UserAuthInfo {
         } else {return nil}
     }
     
-    public init(name: String, oauthToken: OAuthToken) {
-        self.init(name:name, oauthToken:oauthToken, userId:"")
+    var userFirstName: String? {
+        return data["userFirstName"] as? String
     }
     
-    init(name: String, oauthToken: OAuthToken, userId: String) {
+    var userLastName: String? {
+        return data["userLastName"] as? String
+    }
+    
+    public init(name: String, oauthToken: OAuthToken) {
+        self.init(name:name, oauthToken:oauthToken, user: sampleUserProfile())
+    }
+    
+    init(name: String, oauthToken: OAuthToken, user: UserProfile) {
         self.accountName = name
         self.token = oauthToken
-        self.userId = userId
+        self._userId = user.id ?? ""
+        self._userFirstName = user.firstName ?? ""
+        self._userLastName = user.lastName ?? ""
+    }
+    
+    private struct sampleUserProfile: UserProfile {
+        var id: String? = "id"
+        var firstName: String? = "name"
+        var lastName: String? = "last"
     }
 }

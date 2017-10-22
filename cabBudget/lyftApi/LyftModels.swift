@@ -149,6 +149,28 @@ extension Dropoff {
     }
 }
 
+struct Address {
+    let lat: Double
+    let lng: Double
+    let address: String?
+}
+
+extension Address {
+    init?(json:[String:Any]) {
+        guard let lat = json["lat"] as? Double,
+            let long = json["lng"] as? Double
+            else {
+                return nil
+        }
+       
+        self.lat = lat
+        self.lng = long
+        
+        // Address can be null
+        self.address = json["address"] as? String ?? nil
+    }
+}
+
 
 /// Ride History
 struct Rides {
@@ -159,6 +181,9 @@ struct Rides {
     let price: Price
     let pickup: Pickup?
     let dropoff: Dropoff?
+    let origin: Address
+    let destination: Address
+    let requestedTime: String
 }
 
 extension Rides {
@@ -167,7 +192,10 @@ extension Rides {
         guard let rideId = json["ride_id"] as? String,
             let status = json["status"] as? String,
             let rideType = json["ride_type"] as? String,
-            let price = Price(json: (json["price"] as? [String:Any])!)
+            let price = Price(json: (json["price"] as? [String:Any])!),
+            let origin = Address(json:(json["origin"] as? [String:Any])!),
+            let destination = Address(json:(json["destination"] as? [String:Any])!),
+            let requestedTime = json["requested_at"] as? String
             else {
                 return nil
         }
@@ -187,15 +215,18 @@ extension Rides {
         self.price = price
         self.pickup = pickup
         self.dropoff = dropoff
+        self.origin = origin
+        self.destination = destination
+        self.requestedTime = requestedTime
     }
 }
 
 
-struct Profile {
-    let id: String
-    let firstName: String
-    let lastName: String
-    let hasRidden: Bool
+struct Profile : UserProfile {
+    var id: String?
+    var firstName: String?
+    var lastName: String?
+    let hasRidden: Bool?
 }
 
 extension Profile {
@@ -211,5 +242,12 @@ extension Profile {
         self.firstName = firstName
         self.lastName = lastName
         self.hasRidden = hasRidden
+    }
+    
+    init(id:String, firstName: String, lastName:String) {
+        self.id = id
+        self.firstName = firstName
+        self.lastName = lastName
+        self.hasRidden = false
     }
 }

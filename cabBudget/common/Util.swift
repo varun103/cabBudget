@@ -12,8 +12,28 @@ import CoreLocation
 /// Helper for dates
 protocol DateHelper {
     
-    func timeZoneforLocation(lat:Double, lng:Double) -> TimeZone
+    //func timeZoneforLocation(lat:Double, lng:Double) -> TimeZone
+}
 
+extension DateHelper {
+    
+    
+    /// Returns a date obj for provided String
+    /// String format should be "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+    /// else will return null
+    static func date(from dateString: String) -> Date? {
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        let date = df.date(from: dateString)
+        //    var calender = Calendar.current
+        //    calender.timeZone = TimeZone(abbreviation: "EST")!
+        //    print("date ",  calender.component(.hour, from: date!))
+        return date
+    }
+}
+
+class DateHelperImpl : DateHelper {
+    
 }
 
 /// Returns the current time in seconds
@@ -34,19 +54,7 @@ public func convertUTCToTimezone(dateUTC: Date, timeZone: TimeZone) -> Date {
     return Date()
 }
 
-public func dateFromString(dateString: String) -> Date {
-    let df = DateFormatter()
-    //df.locale = Locale(identifier: "en_US_POSIX")
-    df.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-//    df.timeZone = TimeZone(secondsFromGMT: 0)
-    df.timeZone = TimeZone(abbreviation: "EST")
-    var date = df.date(from: dateString)
-   // df.timeZone = TimeZone.current
-    var calender = Calendar.current
-    calender.timeZone = TimeZone(abbreviation: "EST")!
-    print("date ",  calender.component(.hour, from: date!))
-    return date!
-}
+
 
 
 public func date() {

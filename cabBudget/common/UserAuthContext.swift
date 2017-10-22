@@ -23,7 +23,7 @@ protocol UserAuthContext {
     /// - Parameters:
     ///   - userId: userId of the calling user
     ///   - oauthToken: oauth token
-    func saveUserAuthToken(userId: String, oauthToken: OAuthToken)
+    func saveUserAuthToken(user: UserProfile, oauthToken: OAuthToken)
     
     /// Removes the access token from the key chain
     func deleteUserAuthToken()
@@ -51,8 +51,8 @@ class UserAuthContextImp: UserAuthContext {
     }
     
     /// Saves the access token
-    func saveUserAuthToken(userId: String, oauthToken: OAuthToken) {
-        let lyftKeyChainKey = LyftKeychainKey(name: ACCOUNT_NAME, oauthToken: oauthToken, userId: userId)
+    func saveUserAuthToken(user: UserProfile, oauthToken: OAuthToken) {
+        let lyftKeyChainKey = LyftKeychainKey(name: ACCOUNT_NAME, oauthToken: oauthToken, user: user)
         do {
             try lyftKeyChainKey.saveInKeychain()
             print("Saved in keychain")

@@ -7,7 +7,6 @@
 //
 
 
-
 /// Return a url with query parameters
 ///
 /// - Parameters:

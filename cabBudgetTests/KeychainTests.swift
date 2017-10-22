@@ -29,7 +29,7 @@ class KeychainTests: XCTestCase {
         try getKey.fetchFromKeychain()
         XCTAssertEqual("refresh", getKey.refreshToken)
         XCTAssertEqual("ccess", getKey.accessToken)
-        XCTAssertEqual("abc", getKey.user)
+        XCTAssertEqual("abc", getKey.userId)
         try getKey.removeFromKeychain()
     }
 }

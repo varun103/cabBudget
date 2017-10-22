@@ -73,7 +73,7 @@ class LyftAuthenticationServiceImpl: LyftAuthenticationService {
             else {
                 self.lyftApi.getAccessTokenFromRefreshToken(refreshToken: key.refreshToken!) { lyftToken, error in
                     if let _token = lyftToken {
-                        UserAuthContextImp.get().saveUserAuthToken(userId:key.user ?? "", oauthToken: _token)
+                        UserAuthContextImp.get().saveUserAuthToken(user:Profile(id:key.userId ?? "", firstName: key.userFirstName ?? "", lastName: key.userLastName ?? ""), oauthToken: _token)
                         print("Access token obtained using refresh token")
                         completion(_token.accessToken!)
                     } else {
