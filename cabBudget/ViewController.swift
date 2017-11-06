@@ -21,6 +21,10 @@ class ViewController: UIViewController {
         }
         //timezone()
     }
+    var helper = DateHelperImpl()
+    
+    @IBOutlet weak var monthLabel: UILabel!
+    @IBOutlet weak var totalCost: UILabel!
     
     @IBAction func login(_ sender: Any) {
         UserAuthContextImp.get().deleteUserAuthToken()
@@ -30,14 +34,33 @@ class ViewController: UIViewController {
         let lyftAuth = LyftAuthenticationServiceImpl()
         let lyftApi = LyftAPIImpl()
         
-        lyftAuth.fetchAccessToken { accessToken in
-            lyftApi.rideHistory(accessToken: accessToken) {[weak self] rides, error in
-                
-                if let _rides = rides {
-                    for ride in _rides {
-                        self?.insert(ride)
-                    }
-                }
+//        lyftAuth.fetchAccessToken { accessToken in
+//            let date = DateHelperImpl.getBeginningOf(month: 10, year: 2017)
+//            lyftApi.rideHistory(startTime: DateHelperImpl.dateString(from: date!),accessToken: accessToken) {[weak self] rides, error in
+//                let _total = 0
+//                if let _rides = rides {
+//                    for ride in _rides {
+//                        print(ride.requestedTime)
+//                        print(ride.origin.address)
+//                        print(ride.destination.address)
+//                        print(ride.price.amount)
+//                    }
+//                }
+//                DispatchQueue.main.async {
+//                    self?.totalCost.text = String(_total/100)
+//                }
+//            }
+//        }
+        
+        getRidesCurrentMonth() { [weak self] rides  in
+            var _total = 0
+            for ride in rides {
+                print(ride.price)
+                _total = _total + Int(ride.price)
+            }
+            DispatchQueue.main.async {
+                self?.monthLabel.text = (self?.helper.currentMonthName!)! + " " + String(describing: self?.helper.currentYear!)
+                 self?.totalCost.text = String(_total/100)
             }
         }
         
@@ -64,6 +87,9 @@ class ViewController: UIViewController {
     }
     
     func insert(_ ride:Rides) {
+    }
+    
+    func getRidesCurrentMonth(completion: @escaping([Ride]) -> Void) {
         
     }
     

@@ -22,10 +22,10 @@ class KeychainTests: XCTestCase {
     }
     
     func testSave() throws {
-        let key = LyftKeychainKey(name:"test", oauthToken: oauth, userId:"abc")
+        let key = KeychainKey(name:"test", oauthToken: oauth, userId:"abc")
         try key.saveInKeychain()
 
-        var getKey = LyftKeychainKey(name:"test", oauthToken: LyftOAuthToken())
+        var getKey = KeychainKey(name:"test", oauthToken: LyftOAuthToken())
         try getKey.fetchFromKeychain()
         XCTAssertEqual("refresh", getKey.refreshToken)
         XCTAssertEqual("ccess", getKey.accessToken)

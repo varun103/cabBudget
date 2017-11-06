@@ -8,8 +8,6 @@
 
 import UIKit
 
-let ACCOUNT_NAME = "lyft"
-
 /// Deals with Authentication with Lyft
 protocol LyftAuthenticationService {
     
@@ -72,6 +70,7 @@ class LyftAuthenticationServiceImpl: LyftAuthenticationService {
                 }
             else {
                 self.lyftApi.getAccessTokenFromRefreshToken(refreshToken: key.refreshToken!) { lyftToken, error in
+                    //TODO: handle errors in case of connectivity or authentication issues
                     if let _token = lyftToken {
                         UserAuthContextImp.get().saveUserAuthToken(user:Profile(id:key.userId ?? "", firstName: key.userFirstName ?? "", lastName: key.userLastName ?? ""), oauthToken: _token)
                         print("Access token obtained using refresh token")

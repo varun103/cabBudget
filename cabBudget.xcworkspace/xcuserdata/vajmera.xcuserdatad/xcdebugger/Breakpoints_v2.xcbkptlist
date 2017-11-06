@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cabBudget/ViewController.swift"
-            timestampString = "530403511.614014"
+            timestampString = "531630431.724888"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81">
+            startingLineNumber = "107"
+            endingLineNumber = "107">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cabBudget/ViewController.swift"
-            timestampString = "530403511.614244"
+            timestampString = "531630431.724946"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81">
+            startingLineNumber = "107"
+            endingLineNumber = "107">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -38,7 +38,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cabBudget/AppDelegate.swift"
-            timestampString = "530403511.614318"
+            timestampString = "530405830.673822"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
@@ -166,7 +166,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cabBudgetTests/KeychainTests.swift"
-            timestampString = "530403511.61523"
+            timestampString = "531631480.886895"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -182,7 +182,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cabBudgetTests/KeychainTests.swift"
-            timestampString = "530403511.61529"
+            timestampString = "531631480.886949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -246,7 +246,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cabBudgetTests/KeychainTests.swift"
-            timestampString = "530403511.615378"
+            timestampString = "531631480.887019"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
@@ -310,7 +310,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cabBudget/ViewController.swift"
-            timestampString = "530403511.615462"
+            timestampString = "531630431.725122"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
@@ -358,11 +358,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cabBudget/ViewController.swift"
-            timestampString = "530403511.615549"
+            timestampString = "531630431.725185"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "saveOauthToken()"
             landmarkType = "7">
             <Locations>
@@ -374,11 +374,11 @@
                   moduleName = "cabBudget"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vajmera/projects/CabBudget/cabBudget/cabBudget/ViewController.swift"
-                  timestampString = "530362884.968899"
+                  timestampString = "531629602.073519"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
                   offsetFromSymbolStart = "1457">
                </Location>
                <Location
@@ -389,11 +389,11 @@
                   moduleName = "cabBudget"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vajmera/projects/CabBudget/cabBudget/cabBudget/ViewController.swift"
-                  timestampString = "530362884.970341"
+                  timestampString = "531629602.076258"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
                   offsetFromSymbolStart = "797">
                </Location>
             </Locations>
@@ -530,22 +530,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "cabBudget/ViewController.swift"
-            timestampString = "530403511.615715"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "getRides(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -614,7 +598,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cabBudget/lyftApi/LyftAuthenticationServiceImpl.swift"
-            timestampString = "530403511.615883"
+            timestampString = "530405830.675531"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
@@ -694,7 +678,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cabBudgetTests/KeychainTests.swift"
-            timestampString = "530403511.616078"
+            timestampString = "531631480.887257"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -757,27 +741,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cabBudget/common/UserAuthContext.swift"
-            timestampString = "530403511.616186"
+            timestampString = "531631480.887311"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "saveUserAuthToken(user:oauthToken:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "cabBudget/common/UserAuthContext.swift"
-            timestampString = "530403511.616349"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "refresh()"
             landmarkType = "7">
          </BreakpointContent>
@@ -789,7 +757,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cabBudget/ViewController.swift"
-            timestampString = "530403511.616464"
+            timestampString = "531630431.725664"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
@@ -805,7 +773,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cabBudget/lyftApi/LyftAuthenticationServiceImpl.swift"
-            timestampString = "530403511.61658"
+            timestampString = "530405830.676339"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
@@ -869,7 +837,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cabBudget/lyftApi/LyftAuthenticationServiceImpl.swift"
-            timestampString = "530403511.616733"
+            timestampString = "530405830.676429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
@@ -885,7 +853,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cabBudget/lyftApi/LyftAuthenticationServiceImpl.swift"
-            timestampString = "530403511.61684"
+            timestampString = "530405830.676485"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -900,38 +868,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "cabBudget/common/UserAuthContext.swift"
-            timestampString = "530403511.616939"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "loadOauthToken()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "cabBudget/common/UserAuthContext.swift"
-            timestampString = "530403511.617057"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "cabBudget/lyftApi/LyftAuthenticationServiceImpl.swift"
-            timestampString = "530403511.617142"
+            timestampString = "530405830.676637"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
@@ -946,24 +884,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "cabBudget/common/UserAuthContext.swift"
-            timestampString = "530403511.617228"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "init()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "cabBudget/lyftApi/LyftModels.swift"
-            timestampString = "530403511.617349"
+            timestampString = "530524909.522023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "163"
@@ -979,7 +901,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cabBudget/lyftApi/LyftModels.swift"
-            timestampString = "530403511.617449"
+            timestampString = "530524909.522069"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "164"
@@ -995,7 +917,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cabBudget/lyftApi/LyftModels.swift"
-            timestampString = "530403511.617513"
+            timestampString = "530524909.522103"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "162"
@@ -1011,13 +933,77 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cabBudget/SaveViewController.swift"
-            timestampString = "530403511.617586"
+            timestampString = "531631480.887599"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "insert(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cabBudget/SaveViewController.swift"
+            timestampString = "531631480.887638"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "getRidesCurrentMonth(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cabBudget/SaveViewController.swift"
+            timestampString = "531631480.887672"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "getRidesCurrentMonth(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__ObjC.NSManagedObjectContext) -&gt; () in cabBudget.SaveViewController.getRidesCurrentMonth(completion: (Swift.Array&lt;cabBudget.Ride&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "cabBudget"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vajmera/projects/CabBudget/cabBudget/cabBudget/SaveViewController.swift"
+                  timestampString = "531629602.092497"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "479">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Array&lt;cabBudget.Ride&gt; in closure #1 (__ObjC.NSManagedObjectContext) -&gt; () in cabBudget.SaveViewController.getRidesCurrentMonth(completion: (Swift.Array&lt;cabBudget.Ride&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "cabBudget"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vajmera/projects/CabBudget/cabBudget/cabBudget/SaveViewController.swift"
+                  timestampString = "531629602.094355"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "62">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

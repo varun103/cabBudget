@@ -59,8 +59,7 @@ extension HttpError {
 }
 
 enum HttpMethod: String {
-    case GET = "GET"
-    case POST = "POST"
+    case GET, POST
 }
 
 /// Implementation

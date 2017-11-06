@@ -14,4 +14,8 @@ enum TimeZoneError: Error {
 
 enum DBError: Error {
     case couldNotSave
+    
+    case inconsistencyError
+    
+    case errorInReadingFromDb
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 /// IOS Keychain Key holds the users oauth token
-struct LyftKeychainKey: KeychainGenericPasswordType, UserAuthInfo {
+struct KeychainKey: KeychainGenericPasswordType, UserAuthInfo {
     
     let accountName: String
     let token: OAuthToken

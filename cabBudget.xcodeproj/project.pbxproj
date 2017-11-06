@@ -13,6 +13,7 @@
 		551C482F1F9C788300722465 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C482E1F9C788300722465 /* UserProfile.swift */; };
 		551C48311F9CA4F300722465 /* SaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C48301F9CA4F300722465 /* SaveViewController.swift */; };
 		5568A3AC1F7F2A6E00D8BC94 /* LyftAuthenticationServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5568A3AB1F7F2A6E00D8BC94 /* LyftAuthenticationServiceImpl.swift */; };
+		557DE0291FB0030C0018CD44 /* ConnectedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557DE0281FB0030C0018CD44 /* ConnectedApp.swift */; };
 		5583FE0D1F8972790083E409 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5583FE0C1F8972790083E409 /* Location.swift */; };
 		5586638C1F6F518E00D36D82 /* HttpUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5586638B1F6F518E00D36D82 /* HttpUtil.swift */; };
 		55A8EADE1F67C1890036B87F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A8EADD1F67C1890036B87F /* AppDelegate.swift */; };
@@ -27,14 +28,14 @@
 		55E216A81F95F33700DB0B14 /* OauthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E216A71F95F33700DB0B14 /* OauthToken.swift */; };
 		55E3AFA91F71190D00CC44BB /* HttpUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3AFA81F71190D00CC44BB /* HttpUtilTests.swift */; };
 		55E3AFAB1F71268F00CC44BB /* LyftOAuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3AFAA1F71268F00CC44BB /* LyftOAuthConfig.swift */; };
-		55E3DF7D1F722EC200AFDF14 /* HttpClientImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3DF7C1F722EC200AFDF14 /* HttpClientImpl.swift */; };
+		55E3DF7D1F722EC200AFDF14 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3DF7C1F722EC200AFDF14 /* HttpClient.swift */; };
 		55E3DF7F1F7384BE00AFDF14 /* LyftApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3DF7E1F7384BE00AFDF14 /* LyftApi.swift */; };
 		55E3DF811F7B55DD00AFDF14 /* LyftModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3DF801F7B55DD00AFDF14 /* LyftModels.swift */; };
 		55E3DF831F7B5BB800AFDF14 /* LyftModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3DF821F7B5BB800AFDF14 /* LyftModelsTests.swift */; };
 		55E3DF851F7CDD9A00AFDF14 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3DF841F7CDD9A00AFDF14 /* Keychain.swift */; };
 		55E3DF871F7CEE0E00AFDF14 /* KeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3DF861F7CEE0E00AFDF14 /* KeychainTests.swift */; };
-		55E3DF891F7CF24200AFDF14 /* LyftKeychainKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3DF881F7CF24200AFDF14 /* LyftKeychainKey.swift */; };
-		55F0A3111F8038F5009F6ACF /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F0A3101F8038F5009F6ACF /* Util.swift */; };
+		55E3DF891F7CF24200AFDF14 /* KeychainKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E3DF881F7CF24200AFDF14 /* KeychainKey.swift */; };
+		55F0A3111F8038F5009F6ACF /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F0A3101F8038F5009F6ACF /* DateHelper.swift */; };
 		55F0A3131F803CBE009F6ACF /* UtilTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F0A3121F803CBE009F6ACF /* UtilTest.swift */; };
 		55F0A3161F819265009F6ACF /* LyftAuthenticationServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F0A3151F819265009F6ACF /* LyftAuthenticationServiceTest.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		551C48301F9CA4F300722465 /* SaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveViewController.swift; sourceTree = "<group>"; };
 		554C7C8C1F691434001D4BE1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		5568A3AB1F7F2A6E00D8BC94 /* LyftAuthenticationServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyftAuthenticationServiceImpl.swift; sourceTree = "<group>"; };
+		557DE0281FB0030C0018CD44 /* ConnectedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedApp.swift; sourceTree = "<group>"; };
 		5583FE0C1F8972790083E409 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		5586638B1F6F518E00D36D82 /* HttpUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpUtil.swift; sourceTree = "<group>"; };
 		55A8EADA1F67C1890036B87F /* cabBudget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cabBudget.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,14 +84,14 @@
 		55E216A71F95F33700DB0B14 /* OauthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OauthToken.swift; sourceTree = "<group>"; };
 		55E3AFA81F71190D00CC44BB /* HttpUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpUtilTests.swift; sourceTree = "<group>"; };
 		55E3AFAA1F71268F00CC44BB /* LyftOAuthConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyftOAuthConfig.swift; sourceTree = "<group>"; };
-		55E3DF7C1F722EC200AFDF14 /* HttpClientImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientImpl.swift; sourceTree = "<group>"; };
+		55E3DF7C1F722EC200AFDF14 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		55E3DF7E1F7384BE00AFDF14 /* LyftApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyftApi.swift; sourceTree = "<group>"; };
 		55E3DF801F7B55DD00AFDF14 /* LyftModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyftModels.swift; sourceTree = "<group>"; };
 		55E3DF821F7B5BB800AFDF14 /* LyftModelsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyftModelsTests.swift; sourceTree = "<group>"; };
 		55E3DF841F7CDD9A00AFDF14 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		55E3DF861F7CEE0E00AFDF14 /* KeychainTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainTests.swift; sourceTree = "<group>"; };
-		55E3DF881F7CF24200AFDF14 /* LyftKeychainKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyftKeychainKey.swift; sourceTree = "<group>"; };
-		55F0A3101F8038F5009F6ACF /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		55E3DF881F7CF24200AFDF14 /* KeychainKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainKey.swift; sourceTree = "<group>"; };
+		55F0A3101F8038F5009F6ACF /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		55F0A3121F803CBE009F6ACF /* UtilTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilTest.swift; sourceTree = "<group>"; };
 		55F0A3141F806163009F6ACF /* cabBudget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = cabBudget.entitlements; sourceTree = "<group>"; };
 		55F0A3151F819265009F6ACF /* LyftAuthenticationServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyftAuthenticationServiceTest.swift; sourceTree = "<group>"; };
@@ -138,7 +140,6 @@
 				55E3AFAA1F71268F00CC44BB /* LyftOAuthConfig.swift */,
 				55E3DF7E1F7384BE00AFDF14 /* LyftApi.swift */,
 				5568A3AB1F7F2A6E00D8BC94 /* LyftAuthenticationServiceImpl.swift */,
-				55E3DF881F7CF24200AFDF14 /* LyftKeychainKey.swift */,
 				55E3DF801F7B55DD00AFDF14 /* LyftModels.swift */,
 			);
 			path = lyftApi;
@@ -147,15 +148,17 @@
 		556AE97B1F906F8000BA02C9 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				55E3DF881F7CF24200AFDF14 /* KeychainKey.swift */,
 				55AFB6E61F909586008A1BD4 /* UserAuthContext.swift */,
 				55E3DF841F7CDD9A00AFDF14 /* Keychain.swift */,
 				5586638B1F6F518E00D36D82 /* HttpUtil.swift */,
-				55E3DF7C1F722EC200AFDF14 /* HttpClientImpl.swift */,
-				55F0A3101F8038F5009F6ACF /* Util.swift */,
+				55E3DF7C1F722EC200AFDF14 /* HttpClient.swift */,
+				55F0A3101F8038F5009F6ACF /* DateHelper.swift */,
 				5583FE0C1F8972790083E409 /* Location.swift */,
 				55E216A71F95F33700DB0B14 /* OauthToken.swift */,
 				551C482B1F9C65B000722465 /* Ride.swift */,
 				551C482E1F9C788300722465 /* UserProfile.swift */,
+				557DE0281FB0030C0018CD44 /* ConnectedApp.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -187,16 +190,16 @@
 			children = (
 				554C7C8B1F691434001D4BE1 /* Model.xcdatamodeld */,
 				55F0A3141F806163009F6ACF /* cabBudget.entitlements */,
+				55A8EAE11F67C1890036B87F /* Main.storyboard */,
+				55A8EADF1F67C1890036B87F /* ViewController.swift */,
+				551C48301F9CA4F300722465 /* SaveViewController.swift */,
 				556AE97A1F906F3700BA02C9 /* lyftApi */,
 				556AE97B1F906F8000BA02C9 /* common */,
 				55A8EADD1F67C1890036B87F /* AppDelegate.swift */,
-				55A8EADF1F67C1890036B87F /* ViewController.swift */,
-				55A8EAE11F67C1890036B87F /* Main.storyboard */,
 				55A8EAE41F67C1890036B87F /* Assets.xcassets */,
 				55A8EAE61F67C1890036B87F /* LaunchScreen.storyboard */,
 				55A8EAE91F67C1890036B87F /* Info.plist */,
 				55E18E3D1F897AA400D84946 /* AppErrors.swift */,
-				551C48301F9CA4F300722465 /* SaveViewController.swift */,
 			);
 			path = cabBudget;
 			sourceTree = "<group>";
@@ -440,15 +443,16 @@
 				55A8EAE01F67C1890036B87F /* ViewController.swift in Sources */,
 				551C482C1F9C65B000722465 /* Ride.swift in Sources */,
 				55AFB6E71F909586008A1BD4 /* UserAuthContext.swift in Sources */,
+				557DE0291FB0030C0018CD44 /* ConnectedApp.swift in Sources */,
 				55E3DF7F1F7384BE00AFDF14 /* LyftApi.swift in Sources */,
 				55A8EADE1F67C1890036B87F /* AppDelegate.swift in Sources */,
 				55E216A81F95F33700DB0B14 /* OauthToken.swift in Sources */,
 				5586638C1F6F518E00D36D82 /* HttpUtil.swift in Sources */,
 				551C482D1F9C70BD00722465 /* Model.xcdatamodeld in Sources */,
 				55E3DF851F7CDD9A00AFDF14 /* Keychain.swift in Sources */,
-				55F0A3111F8038F5009F6ACF /* Util.swift in Sources */,
-				55E3DF891F7CF24200AFDF14 /* LyftKeychainKey.swift in Sources */,
-				55E3DF7D1F722EC200AFDF14 /* HttpClientImpl.swift in Sources */,
+				55F0A3111F8038F5009F6ACF /* DateHelper.swift in Sources */,
+				55E3DF891F7CF24200AFDF14 /* KeychainKey.swift in Sources */,
+				55E3DF7D1F722EC200AFDF14 /* HttpClient.swift in Sources */,
 				5583FE0D1F8972790083E409 /* Location.swift in Sources */,
 				551C482F1F9C788300722465 /* UserProfile.swift in Sources */,
 				55E3DF811F7B55DD00AFDF14 /* LyftModels.swift in Sources */,
@@ -631,7 +635,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.internal.cabBudget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -647,7 +651,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.internal.cabBudget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -662,7 +666,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.internal.cabBudgetTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cabBudget.app/cabBudget";
 			};
@@ -678,7 +682,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.internal.cabBudgetTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cabBudget.app/cabBudget";
 			};
@@ -693,7 +697,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.internal.cabBudgetUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = cabBudget;
 			};
@@ -708,7 +712,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.internal.cabBudgetUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = cabBudget;
 			};

@@ -10,24 +10,31 @@ import UIKit
 import CoreData
 
 class SaveViewController: ViewController {
-
+    
     let container: NSPersistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     override func insert(_ ride: Rides) {
-        super.insert(ride)
-        let context: NSManagedObjectContext = container.viewContext
-        let rideModel = Ride(context:context)
-        let savedRide = try? rideModel.findOrCreate(rides: ride, context: context)
-        try? context.save()
-        //print(savedRide)
+        container.performBackgroundTask() { context in
+            let rideModel = Ride(context:context)
+            _ = try? rideModel.findOrCreate(rides: ride, context: context)
+            try? context.save()
+        }
+    }
+    
+    override func getRidesCurrentMonth(completion: @escaping([Ride]) -> Void) {
+        container.performBackgroundTask() { context in
+            let rideModel = Ride(context:context)
+            let rides = try? rideModel.fetchRidesFrom(beginning: DateHelperImpl.getBeginningOf(month:10 , year: 2017)!, end: Date(), context: context)
+            completion(rides ?? [])
+        }
     }
 
 }

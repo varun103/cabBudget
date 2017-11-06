@@ -8,16 +8,23 @@
 
 import Foundation
 
+/// Wrapper around lyft's Rest API
 protocol LyftAPI {
     
     /// GET a new access token using the refresh token provided
-    func getAccessTokenFromRefreshToken(refreshToken:String, completion: @escaping (LyftOAuthToken?, String) -> Void)
+    func getAccessTokenFromRefreshToken(refreshToken:String, completion: @escaping (LyftOAuthToken?, HttpError?) -> Void)
     
     /// GET a new access token using the authorization code
     func getAccessTokenFromAuthorizationCode(authorizationCode:String, completion: @escaping (LyftOAuthToken?, String) -> Void)
     
     /// GET the access token
     func getAccessToken(grant: Grant, code:String, completion: @escaping (HttpResponse?, HttpError?) -> Void)
+    
+    /// Get the ride history for the authorized user for the specified time period
+    func rideHistory(startTime: String, accessToken: String, completion: @escaping ([Rides]?, HttpError?) -> Void)
+    
+    /// Get the ride history for the authorized user starting from
+    func rideHistory(startTime: String, endTime:String?, accessToken: String, completion: @escaping ([Rides]?, HttpError?) -> Void)
     
     /// GET the ride history for the authorized user
     func rideHistory(accessToken: String, completion: @escaping ([Rides]?, HttpError?) -> Void)
@@ -50,13 +57,13 @@ class LyftAPIImpl: LyftAPI {
     }
     
     /// Get the access token using the refrest token
-    func getAccessTokenFromRefreshToken(refreshToken:String, completion: @escaping (LyftOAuthToken?, String) -> Void) {
+    func getAccessTokenFromRefreshToken(refreshToken:String, completion: @escaping (LyftOAuthToken?, HttpError?) -> Void) {
         self.getAccessToken(grant: Grant.RefreshToken, code: refreshToken) { httpResponse, error in
             if (error != nil) {
-                completion(nil, "")
+                completion(nil, error)
             } else {
                 let ac = LyftOAuthToken(json: (httpResponse?.responseBody!)!, refreshToken: refreshToken)
-                completion(ac, "")
+                completion(ac, nil)
             }
         }
     }
@@ -93,9 +100,13 @@ class LyftAPIImpl: LyftAPI {
         }
     }
     
-    func rideHistory(accessToken:String, completion:@escaping ([Rides]?, HttpError?) -> Void) {
-        let url = "https://api.lyft.com/v1/rides?start_time=2015-12-01T21:04:22Z"
+    func rideHistory(startTime: String, endTime: String?, accessToken: String, completion: @escaping ([Rides]?, HttpError?) -> Void) {
+        var endTimeParam = ""
+        if let _endTime = endTime {
+            endTimeParam = "&end_time=" + _endTime
+        }
         
+        let url = "https://api.lyft.com/v1/rides?start_time=" + startTime + endTimeParam
         self.httpClient.get(url: url, headers: basicHttpHeaders(accessToken)) { httpResponse, httpError in
             var rides: [Rides] = []
             
@@ -118,6 +129,17 @@ class LyftAPIImpl: LyftAPI {
         }
     }
     
+    func rideHistory(startTime: String, accessToken: String, completion: @escaping ([Rides]?, HttpError?) -> Void) {
+        rideHistory(startTime: startTime, endTime:nil, accessToken: accessToken) { rides, httpError in
+            completion(rides, httpError)
+        }
+    }
+    
+    func rideHistory(accessToken:String, completion:@escaping ([Rides]?, HttpError?) -> Void) {
+        rideHistory(startTime: "2015-12-01T21:04:22Z", accessToken: accessToken) { rides, httpError in
+            completion(rides, httpError)
+        }
+    }
     
     func userProfile(accessToken: String, completion: @escaping (Profile?, HttpError?) -> Void) {
         let url = "https://api.lyft.com/v1/profile"

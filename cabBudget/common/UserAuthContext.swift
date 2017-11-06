@@ -8,6 +8,7 @@
 import Foundation
 
 /// Access the users auth context
+/// Intended to have once instance
 protocol UserAuthContext {
     
     /// Users Lyft Auth context
@@ -18,12 +19,24 @@ protocol UserAuthContext {
     /// - Returns: UserAuthContext
     static func get() -> UserAuthContext
     
-    /// Saves this Oauth Token in the Key Chain
+    /// Saves this Oauth Token in the Keychain
+    ///
+    /// - Parameters:
+    ///   - userId: userId of the calling user
+    ///   - oauthToken: oauth token
+    func saveUserAuthToken(user: UserProfile, for app: ConnectedApp, oauthToken : OAuthToken)
+    
+    /// Saves this Oauth Token in the Keychain
     ///
     /// - Parameters:
     ///   - userId: userId of the calling user
     ///   - oauthToken: oauth token
     func saveUserAuthToken(user: UserProfile, oauthToken: OAuthToken)
+    
+    /// Removes the provided app's Oauth Token from the Keychain
+    ///
+    /// - Parameter app: The connected App
+    func deleteUserAuthToken(for app: ConnectedApp)
     
     /// Removes the access token from the key chain
     func deleteUserAuthToken()
@@ -31,6 +44,7 @@ protocol UserAuthContext {
 
 
 /// User's Authorization context
+/// Meant to be a singleton
 class UserAuthContextImp: UserAuthContext {
     
     private static let authContext: UserAuthContextImp = UserAuthContextImp()
@@ -39,7 +53,6 @@ class UserAuthContextImp: UserAuthContext {
     var lyftAuthInfo: UserAuthInfo?
     
     /// Singleton
-    ///
     /// - Returns: an instance of the users authorization context
     static func get() -> UserAuthContext {
         return authContext
@@ -50,9 +63,8 @@ class UserAuthContextImp: UserAuthContext {
         loadOauthToken()
     }
     
-    /// Saves the access token
-    func saveUserAuthToken(user: UserProfile, oauthToken: OAuthToken) {
-        let lyftKeyChainKey = LyftKeychainKey(name: ACCOUNT_NAME, oauthToken: oauthToken, user: user)
+    func saveUserAuthToken(user: UserProfile, for app: ConnectedApp, oauthToken : OAuthToken) {
+        let lyftKeyChainKey = KeychainKey(name: app.rawValue, oauthToken: oauthToken, user: user)
         do {
             try lyftKeyChainKey.saveInKeychain()
             print("Saved in keychain")
@@ -60,12 +72,19 @@ class UserAuthContextImp: UserAuthContext {
         } catch {}
     }
     
+    /// Saves the access token
+    func saveUserAuthToken(user: UserProfile, oauthToken: OAuthToken) {
+        saveUserAuthToken(user: user, for: ConnectedApp.lyft, oauthToken: oauthToken)
+    }
+    
+    func deleteUserAuthToken(for app: ConnectedApp) {
+        var key = KeychainKey(name: app.rawValue, oauthToken: LyftOAuthToken())
+        do { try key = key.fetchFromKeychain() } catch{ }
+    }
+    
     /// Removes the access token from the key chain
     func deleteUserAuthToken() {
-        var key = LyftKeychainKey(name: ACCOUNT_NAME, oauthToken: LyftOAuthToken())
-        do {
-            try key.fetchFromKeychain()
-        }catch{}
+        deleteUserAuthToken(for: .lyft)
     }
     
     private init() {
@@ -73,9 +92,9 @@ class UserAuthContextImp: UserAuthContext {
     }
     
     private func loadOauthToken() {
-        var key = LyftKeychainKey(name: ACCOUNT_NAME, oauthToken: LyftOAuthToken())
+        var key = KeychainKey(name: ConnectedApp.lyft.rawValue, oauthToken: LyftOAuthToken())
         do {
-            try key.fetchFromKeychain()
+            try key = key.fetchFromKeychain()
             self.lyftAuthInfo = key
         } catch {
             self.lyftAuthInfo = nil
